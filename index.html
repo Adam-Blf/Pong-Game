@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeu Pong classique avec IA et multijoueur">
+    <title>🏓 Pong Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Menu Principal -->
+        <div class="menu" id="mainMenu">
+            <h1>🏓 PONG</h1>
+            <p class="subtitle">Jeu classique revisité</p>
+            
+            <div class="menu-buttons">
+                <button class="menu-btn" id="soloBtn">
+                    <span class="btn-icon">🤖</span>
+                    <span class="btn-text">Solo vs IA</span>
+                </button>
+                <button class="menu-btn" id="multiBtn">
+                    <span class="btn-icon">👥</span>
+                    <span class="btn-text">Multijoueur</span>
+                </button>
+                <button class="menu-btn" id="settingsBtn">
+                    <span class="btn-icon">⚙️</span>
+                    <span class="btn-text">Paramètres</span>
+                </button>
+            </div>
+
+            <div class="controls-info">
+                <h3>🎮 Contrôles</h3>
+                <div class="control-grid">
+                    <div class="control-item">
+                        <span class="key">W / S</span>
+                        <span>Joueur 1</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑ / ↓</span>
+                        <span>Joueur 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel hidden" id="settingsPanel">
+            <h2>⚙️ Paramètres</h2>
+            
+            <div class="setting-item">
+                <label for="difficulty">Difficulté IA</label>
+                <select id="difficulty">
+                    <option value="easy">Facile</option>
+                    <option value="medium" selected>Moyen</option>
+                    <option value="hard">Difficile</option>
+                    <option value="impossible">Impossible</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="ballSpeed">Vitesse de la balle</label>
+                <input type="range" id="ballSpeed" min="3" max="10" value="5">
+                <span id="ballSpeedValue">5</span>
+            </div>
+
+            <div class="setting-item">
+                <label for="paddleSpeed">Vitesse des raquettes</label>
+                <input type="range" id="paddleSpeed" min="3" max="12" value="8">
+                <span id="paddleSpeedValue">8</span>
+            </div>
+
+            <div class="setting-item">
+                <label for="winScore">Score pour gagner</label>
+                <input type="number" id="winScore" min="3" max="21" value="11">
+            </div>
+
+            <button class="menu-btn" id="backToMenuBtn">← Retour</button>
+        </div>
+
+        <!-- Game Canvas -->
+        <div class="game-screen hidden" id="gameScreen">
+            <div class="game-header">
+                <div class="score-board">
+                    <div class="player-score">
+                        <span class="player-name" id="player1Name">Joueur 1</span>
+                        <span class="score" id="score1">0</span>
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="player-score">
+                        <span class="score" id="score2">0</span>
+                        <span class="player-name" id="player2Name">Joueur 2</span>
+                    </div>
+                </div>
+                <button class="pause-btn" id="pauseBtn">⏸️</button>
+            </div>
+
+            <canvas id="pongCanvas" width="800" height="600"></canvas>
+
+            <div class="game-footer">
+                <button class="game-btn" id="quitBtn">🚪 Quitter</button>
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div class="pause-menu hidden" id="pauseMenu">
+            <h2>⏸️ Pause</h2>
+            <div class="pause-buttons">
+                <button class="menu-btn" id="resumeBtn">▶️ Reprendre</button>
+                <button class="menu-btn" id="restartBtn">🔄 Recommencer</button>
+                <button class="menu-btn" id="mainMenuBtn">🏠 Menu Principal</button>
+            </div>
+        </div>
+
+        <!-- Victory Modal -->
+        <div class="modal hidden" id="victoryModal">
+            <div class="modal-content">
+                <h2 class="victory-title">🏆 Victoire !</h2>
+                <p class="winner-text" id="winnerText"></p>
+                <div class="final-score" id="finalScore"></div>
+                <div class="modal-buttons">
+                    <button class="menu-btn" id="playAgainBtn">🔄 Rejouer</button>
+                    <button class="menu-btn" id="menuBtn">🏠 Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Créé par Adam Beloucif | <a href="https://github.com/Adam-Blf/Pong-Game" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
