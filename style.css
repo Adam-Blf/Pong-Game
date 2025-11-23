@@ -834,3 +834,10 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Fix for player names in score board */
+.score-board .player-name {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin: 0 15px;
+}
