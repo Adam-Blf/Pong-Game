@@ -23,7 +23,8 @@ let settings = {
     difficulty: 'medium',
     ballSpeed: 5,
     paddleSpeed: 8,
-    winScore: 11
+    winScore: 11,
+    keyboardLayout: 'azerty'
 };
 
 // Game Objects
@@ -85,7 +86,8 @@ const elements = {
     ballSpeedValue: document.getElementById('ballSpeedValue'),
     paddleSpeed: document.getElementById('paddleSpeed'),
     paddleSpeedValue: document.getElementById('paddleSpeedValue'),
-    winScore: document.getElementById('winScore')
+    winScore: document.getElementById('winScore'),
+    keyboardLayout: document.getElementById('keyboardLayout')
 };
 
 // ===================================================
@@ -195,11 +197,14 @@ function update() {
 }
 
 function movePaddles() {
-    // Player 1 (W/S keys)
-    if (keys['w'] || keys['W']) {
+    // Player 1 Controls
+    const upKey = settings.keyboardLayout === 'azerty' ? 'z' : 'w';
+    const downKey = 's';
+
+    if (keys[upKey] || keys[upKey.toUpperCase()]) {
         paddle.player1.y = Math.max(0, paddle.player1.y - settings.paddleSpeed);
     }
-    if (keys['s'] || keys['S']) {
+    if (keys[downKey] || keys[downKey.toUpperCase()]) {
         paddle.player1.y = Math.min(canvas.height - paddle.height, paddle.player1.y + settings.paddleSpeed);
     }
     
@@ -392,6 +397,22 @@ elements.paddleSpeed.addEventListener('input', (e) => {
     settings.paddleSpeed = parseInt(e.target.value);
     elements.paddleSpeedValue.textContent = e.target.value;
 });
+
+elements.keyboardLayout.addEventListener('change', (e) => {
+    settings.keyboardLayout = e.target.value;
+    updateControlsHint();
+});
+
+function updateControlsHint() {
+    const p1Keys = settings.keyboardLayout === 'azerty' ? 'Z/S' : 'W/S';
+    document.querySelector('.controls-hint').textContent = `P1: ${p1Keys} | P2: ↑/↓ | Pause: P`;
+    
+    // Update menu controls info
+    const keyElement = document.querySelector('.control-item .key');
+    if (keyElement) {
+        keyElement.textContent = p1Keys;
+    }
+}
 
 elements.difficulty.addEventListener('change', (e) => {
     settings.difficulty = e.target.value;
