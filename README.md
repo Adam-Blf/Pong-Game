@@ -1,10 +1,9 @@
-Dernier commit: 23/11/2025 | Langage principal: CSS | Nombre de langages: 3
+![Dernier commit](https://img.shields.io/badge/Dernier%20commit-09/12/2025-brightgreen) ![Langage principal](https://img.shields.io/badge/Langage%20principal-CSS-blue) ![Nombre de langages](https://img.shields.io/badge/Nombre%20de%20langages-3-orange)
 
-Construit avec les outils et technologies : 
-CSS, JavaScript, HTML
+### Construit avec les outils et technologies : 
+![CSS](https://img.shields.io/badge/-CSS-lightgrey) ![JavaScript](https://img.shields.io/badge/-JavaScript-lightgrey) ![HTML](https://img.shields.io/badge/-HTML-lightgrey)
 
 🇫🇷 Français | 🇬🇧 Anglais | 🇪🇸 Espagnol | 🇮🇹 Italien | 🇵🇹 Portugais | 🇷🇺 Russe | 🇩🇪 Allemand | 🇹🇷 Turc
-
 
 # 🏓 Pong Game
 
