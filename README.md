@@ -1,3 +1,11 @@
+Dernier commit: 23/11/2025 | Langage principal: CSS | Nombre de langages: 3
+
+Construit avec les outils et technologies : 
+CSS, JavaScript, HTML
+
+🇫🇷 Français | 🇬🇧 Anglais | 🇪🇸 Espagnol | 🇮🇹 Italien | 🇵🇹 Portugais | 🇷🇺 Russe | 🇩🇪 Allemand | 🇹🇷 Turc
+
+
 # 🏓 Pong Game
 
 Jeu Pong classique revisité avec interface moderne, intelligence artificielle adaptative et mode multijoueur local.
