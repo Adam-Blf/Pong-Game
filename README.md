@@ -24,6 +24,12 @@ Classic Pong with solo AI mode (4 difficulty levels), multiplayer support, custo
 
 # 🏓 Pong Game
 
+![Status](https://img.shields.io/badge/status-complete-brightgreen)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Canvas](https://img.shields.io/badge/Canvas-000?logo=html5&logoColor=white)
+![GH Pages](https://img.shields.io/badge/play-GH_Pages-222?logo=github&logoColor=white)
+
 Jeu Pong classique revisité avec interface moderne, intelligence artificielle adaptative et mode multijoueur local.
 
 ## 🌟 Fonctionnalités
