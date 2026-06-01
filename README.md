@@ -15,6 +15,30 @@
 
 Jeu Pong classique revisité avec interface moderne, intelligence artificielle adaptative et mode multijoueur local.
 
+## Architecture
+
+```mermaid
+flowchart TB
+    HTML["index.html<br/>menu · jeu · paramètres"]
+    CSS["style.css<br/>thème · responsive"]
+    INPUT["Entrées<br/>clavier · solo ou multi"]
+    INIT["initGame(mode)<br/>solo vs IA · multijoueur"]
+    LOOP["gameLoop()<br/>requestAnimationFrame"]
+    UPDATE["update()<br/>physique balle · score"]
+    PADDLE["movePaddles · aiLogic<br/>4 niveaux d'IA · prédiction"]
+    COLLISION["collision()<br/>rebonds raquettes"]
+    RENDER["render()<br/>canvas 2D"]
+
+    HTML --> CSS
+    HTML --> INPUT
+    INPUT --> INIT
+    INIT --> LOOP
+    LOOP --> UPDATE
+    UPDATE --> PADDLE
+    UPDATE --> COLLISION
+    UPDATE --> RENDER
+```
+
 ## 🌟 Fonctionnalités
 
 ### Modes de Jeu
