@@ -19,13 +19,13 @@ Jeu Pong classique revisité avec interface moderne, intelligence artificielle a
 
 ```mermaid
 flowchart TB
-    HTML["index.html<br/>menu · jeu · paramètres"]
-    CSS["style.css<br/>thème · responsive"]
-    INPUT["Entrées<br/>clavier · solo ou multi"]
-    INIT["initGame(mode)<br/>solo vs IA · multijoueur"]
+    HTML["index.html<br/>menu - jeu - paramètres"]
+    CSS["style.css<br/>thème - responsive"]
+    INPUT["Entrées<br/>clavier - solo ou multi"]
+    INIT["initGame(mode)<br/>solo vs IA - multijoueur"]
     LOOP["gameLoop()<br/>requestAnimationFrame"]
-    UPDATE["update()<br/>physique balle · score"]
-    PADDLE["movePaddles · aiLogic<br/>4 niveaux d'IA · prédiction"]
+    UPDATE["update()<br/>physique balle - score"]
+    PADDLE["movePaddles - aiLogic<br/>4 niveaux d'IA - prédiction"]
     COLLISION["collision()<br/>rebonds raquettes"]
     RENDER["render()<br/>canvas 2D"]
 
@@ -295,7 +295,7 @@ Projet open source - libre d'utilisation pour projets personnels ou éducatifs.
 ---
 
 <p align="center">
-  <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> · Data Engineer & Fullstack Developer · <a href="https://github.com/Adam-Blf">GitHub</a> · <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
+  <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> - Data Engineer & Fullstack Developer - <a href="https://github.com/Adam-Blf">GitHub</a> - <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
 </p>
 
 
